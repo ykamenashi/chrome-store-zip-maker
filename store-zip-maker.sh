@@ -19,8 +19,8 @@ if [ ! -d "$TMP_STORE_DIR" ]; then
     mkdir -p "$TMP_STORE_DIR"
 fi
 
-if [ -d "$TMP_STORE_DIR/$1" ]; then
-    rm -rf "${TMP_STORE_DIR}/${COPY_SOURCE_DIR:?}"
+if [ -d "$COPY_DEST_DIR" ]; then
+    rm -rf "$COPY_DEST_DIR"
 fi
 
 cp -r "$COPY_SOURCE_DIR" "$COPY_DEST_DIR"
